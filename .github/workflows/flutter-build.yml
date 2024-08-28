@@ -835,6 +835,7 @@ jobs:
           files: rustdesk-${{ env.VERSION }}-unsigned.tar.gz
 
   generate-bridge-linux:
+    if: false
     uses: ./.github/workflows/bridge.yml
 
   build-rustdesk-android:
