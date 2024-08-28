@@ -252,7 +252,7 @@ jobs:
           # - { target: x86_64-pc-windows-gnu       , os: windows-2022                  }
           - {
               target: i686-pc-windows-msvc,
-              os: windows-2022,
+              os: windows-2019,
               arch: x86,
               vcpkg-triplet: x86-windows-static,
             }
