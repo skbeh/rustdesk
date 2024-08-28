@@ -9,6 +9,9 @@ on:
       upload-tag:
         type: string
         default: "nightly"
+      ref:
+        type: string
+        default: "master"
 
 # NOTE: F-Droid builder script 'flutter/build_fdroid.sh' reads environment
 # variables from this workflow!
@@ -258,6 +261,8 @@ jobs:
 
       - name: Checkout source code
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
 
       - name: Install LLVM and Clang
         uses: rustdesk-org/install-llvm-action-32bit@master
